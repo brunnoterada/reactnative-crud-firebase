@@ -30,8 +30,13 @@ const UserList = (props) =>{
                 users.map(user =>{
                     return(
                         //lista que exibe os usuários
-                        <ListItem key={user.id}>
+                        <ListItem key={user.id} bottomDivider onPress={() => 
+                        props.navigation.navigate('UserDetail',{
+                            userId: user.id
+                        })
+                        }>
                             <ListItem.Chevron/>
+                            <Avatar source={{uri:'https://avatars.githubusercontent.com/u/66955351?v=4'}}/>
 
                             <ListItem.Content>
 
